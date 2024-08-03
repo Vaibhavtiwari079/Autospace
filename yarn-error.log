@@ -1,0 +1,54 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Vaibhav Tiwari\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\MinGW\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Vaibhav Tiwari\AppData\Local\Microsoft\WindowsApps;C:\Users\Vaibhav Tiwari\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Users\Vaibhav Tiwari\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, mkdir 'C:\Users\Vaibhav Tiwari\Desktop\autospace\apps\api\node_modules\@nestjs\cli\node_modules'
+
+npm manifest: 
+  {
+    "name": "autospace",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "workspaces":{
+      "packages":["apps/*","libs/*"],
+      "nohoist": ["**/@nestjs",
+    "**/@nestjs/**"]
+    },
+    "scripts": {
+      "format": "prettier  \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+      "format:check": "pnpm format --check",
+      "format:write": "pnpm format --write",
+      "tsc": "pnpm --parallel -r run tsc",
+      "lint": "pnpm --parallel -r run tsc",
+      "build": "pnpm --parallel -r run build",
+      "validate": "pnpm format:write && pnpm tsc && pnpm lint && pnpm build",
+      "prepare": "husky install"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "prettier": "^3.0.0",
+      "typescript": "^5.5.4",
+      "husky": "^8.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

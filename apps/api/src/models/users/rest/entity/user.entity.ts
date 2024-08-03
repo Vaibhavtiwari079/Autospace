@@ -10,5 +10,4 @@ export class UserEntity implements RestrictProperties<UserEntity, User> {
   name: string
   @IsOptional()
   image: string
-  
 }

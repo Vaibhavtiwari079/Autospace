@@ -58,7 +58,6 @@ export class AuthGuard implements CanActivate {
     const userRoles = await this.getUserRoles(req.user.uid)
     req.user.roles = userRoles
 
-
     return requiredRoles.some((role) => userRoles.includes(role))
   }
 
